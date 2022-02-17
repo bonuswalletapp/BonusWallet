@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "319288242026",
+    "project_id": "jax-wallet",
+    "storage_bucket": "jax-wallet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:319288242026:android:b09362eeef91a08c97bf13",
+        "android_client_info": {
+          "package_name": "io.jaxwallet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "319288242026-036kmlep52n9ia0f30rvc89nlgmti965.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSmusTd1kDscTNeGPPHE1XfVasY1e5tWI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "319288242026-036kmlep52n9ia0f30rvc89nlgmti965.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

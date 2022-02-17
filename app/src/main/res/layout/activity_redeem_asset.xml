@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/background_card">
 
-        <com.jaxwallet.app.widget.ProgressView
+        <com.bonuswallet.app.widget.ProgressView
             android:id="@+id/progress_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -65,7 +65,7 @@
 
     </RelativeLayout>
 
-    <com.jaxwallet.app.widget.SystemView
+    <com.bonuswallet.app.widget.SystemView
         android:id="@+id/system_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

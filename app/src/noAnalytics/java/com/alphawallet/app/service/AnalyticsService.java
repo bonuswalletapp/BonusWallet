@@ -1,4 +1,4 @@
-package com.jaxwallet.app.service;
+package com.bonuswallet.app.service;
 
 import android.content.Context;
 

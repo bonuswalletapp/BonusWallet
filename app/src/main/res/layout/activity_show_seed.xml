@@ -58,7 +58,7 @@
     </LinearLayout>
 
 
-    <com.jaxwallet.app.widget.FunctionButtonBar
+    <com.bonuswallet.app.widget.FunctionButtonBar
         android:id="@+id/layoutButtons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

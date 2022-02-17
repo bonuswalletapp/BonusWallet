@@ -1,8 +1,8 @@
-package com.jaxwallet.app.util;
+package com.bonuswallet.app.util;
 
 import android.app.Activity;
 
-import com.jaxwallet.app.entity.FragmentMessenger;
+import com.bonuswallet.app.entity.FragmentMessenger;
 
 public class UpdateUtils {
     public static void checkForUpdates(Activity context, FragmentMessenger messenger) {

@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.jaxwallet.app.widget.FunctionButtonBar
+        <com.bonuswallet.app.widget.FunctionButtonBar
             android:id="@+id/layoutButtons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
                         android:textSize="11sp" />
                 </LinearLayout>
 
-                <com.jaxwallet.app.widget.NFTImageView
+                <com.bonuswallet.app.widget.NFTImageView
                     android:id="@+id/layout_image"
                     android:layout_below="@id/layout_token_title"
                     android:layout_width="match_parent"
@@ -148,7 +148,7 @@
 
                 </LinearLayout>
 
-                <com.jaxwallet.app.ui.widget.entity.NFTAttributeLayout
+                <com.bonuswallet.app.ui.widget.entity.NFTAttributeLayout
                     android:id="@+id/attributes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

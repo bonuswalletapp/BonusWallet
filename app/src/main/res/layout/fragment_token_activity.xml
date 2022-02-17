@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <com.jaxwallet.app.widget.ActivityHistoryList
+    <com.bonuswallet.app.widget.ActivityHistoryList
         android:id="@+id/history_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -50,7 +50,7 @@
                     android:paddingVertical="14dp"
                     >
 
-                    <com.jaxwallet.app.widget.TokenIcon
+                    <com.bonuswallet.app.widget.TokenIcon
                         android:id="@+id/token_icon"
                         android:layout_width="@dimen/token_icon"
                         android:layout_height="@dimen/token_icon"

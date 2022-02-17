@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.jaxwallet.app.widget.StandardHeader
+    <com.bonuswallet.app.widget.StandardHeader
         android:id="@+id/layout_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
         android:layout_marginStart="@dimen/dp10"
         android:layout_toStartOf="@id/text_paste">
 
-        <com.jaxwallet.app.widget.UserAvatar
+        <com.bonuswallet.app.widget.UserAvatar
             android:id="@+id/avatar"
             android:layout_width="@dimen/dp25"
             android:layout_height="@dimen/dp25"

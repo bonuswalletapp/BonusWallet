@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/background_card">
 
-        <com.jaxwallet.app.widget.ProgressView
+        <com.bonuswallet.app.widget.ProgressView
             android:id="@+id/progress_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -23,7 +23,7 @@
             android:layout_alignParentTop="true"
             tools:visibility="gone" />
 
-        <com.jaxwallet.app.widget.FunctionButtonBar
+        <com.bonuswallet.app.widget.FunctionButtonBar
             android:id="@+id/layoutButtons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -126,7 +126,7 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <com.jaxwallet.app.widget.InputAddress
+                <com.bonuswallet.app.widget.InputAddress
                     android:id="@+id/input_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -431,7 +431,7 @@
     </RelativeLayout>
 
 
-    <com.jaxwallet.app.widget.SystemView
+    <com.bonuswallet.app.widget.SystemView
         android:id="@+id/system_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

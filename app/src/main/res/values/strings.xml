@@ -867,7 +867,7 @@
     <string name="waiting_confirm_swap">Waiting For Confirmation</string>
     <string name="swapping">Swapping %1$s %2$s For  %3$s %4$s</string>
     <string name="confirm_transaction_in_wallet">Confirm This Transaction In Your Wallet</string>
-    <string name="toolbar_header_swap">Swap</string>
+    <string name="toolbar_header_swap">VERIFY KYC</string>
     <string name="activity_cashback">Cashback</string>
     <string name="error_seed_phrase_must_words">Seed phrase can only contain words</string>
     <string name="ask_buy_gas">Would you receive %1$s ?</string>

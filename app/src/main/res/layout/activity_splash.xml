@@ -10,25 +10,25 @@
         android:layout_height="match_parent"
         android:layout_above="@id/layout_new_wallet"
         android:layout_alignParentTop="true"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/splash_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_logo"
-            android:gravity="center_horizontal"/>
+            android:gravity="center_horizontal" />
 
         <TextView
-            android:layout_marginTop="@dimen/dp13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/sp18"
-            android:textColor="@color/text_black"
-            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp13"
             android:fontFamily="@font/font_semibold"
-            android:text="@string/welcome_to_alphawallet"/>
+            android:gravity="center_horizontal"
+            android:text="@string/welcome_to_alphawallet"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp18" />
 
     </LinearLayout>
 
@@ -46,7 +46,7 @@
             android:id="@+id/button_create"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Button.Fill.Primary"
+            style="@style/Button.Fill.System"
             android:layout_marginBottom="@dimen/create_new_wallet_margin_bottom"
             android:text="@string/create_a_new_wallet"
             android:elevation="2dp"
@@ -84,14 +84,14 @@
                     <Button
                         android:id="@+id/button_watch"
                         android:layout_weight="1"
-                        style="@style/Button.Border.Primary"
+                        style="@style/Button.Border.System"
                         android:text="@string/watch"
                         android:layout_marginEnd="@dimen/dp5"
                         />
 
                     <Button
                         android:id="@+id/button_import"
-                        style="@style/Button.Border.Primary"
+                        style="@style/Button.Border.System"
                         android:text="@string/action_import"
                         android:layout_weight="1.0"
                         android:layout_marginStart="@dimen/dp5"

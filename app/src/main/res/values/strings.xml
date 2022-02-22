@@ -874,4 +874,19 @@
     <string name="action_show_address">My Address</string>
     <string name="claim_free_by_verifying_kyc">Claim your free 1000 JRUPPEE by verifying KYC</string>
     <string name="start_verification">Start verification →</string>
+    <string name="title_kyc_verification">KYC Verification</string>
+    <string name="action_start_verification">Start Verification</string>
+    <string name="kyc_unverified">Unverified</string>
+    <string name="kyc_verified">Verified</string>
+    <string name="kyc_pending">Verification Pending</string>
+    <string name="kyc_declined">Declined</string>
+    <string name="kyc_unverified_title">You haven\'t verify your KYC</string>
+    <string name="kyc_verified_title">Account verified</string>
+    <string name="kyc_pending_title">KYC verification in progress</string>
+    <string name="kyc_declined_title">We have a problem with your verification</string>
+    <string name="kyc_unverified_subtitle">Please Proceed To Verify Your Identity.</string>
+    <string name="kyc_verified_subtitle">You Can Now Make Deposits, Withdrawals, And Use P2P.</string>
+    <string name="kyc_pending_subtitle">Please Wit While We Verify Your Identity.</string>
+    <string name="kyc_declined_subtitle">Please Update Your Information.</string>
+    <string name="action_resubmit">Resubmit</string>
 </resources>

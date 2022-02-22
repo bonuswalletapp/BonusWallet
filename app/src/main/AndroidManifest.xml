@@ -20,29 +20,29 @@
         android:required="false" />
 
     <application
-        android:extractNativeLibs="true"
-        android:name="com.bonuswallet.app.App"
+        android:name=".App"
         android:allowBackup="false"
+        android:extractNativeLibs="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:requestLegacyExternalStorage="true"
         android:label="@string/app_name"
         android:launchMode="singleTask"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="false"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true"
         tools:replace="android:name, android:theme, android:allowBackup">
         <activity
+            android:name=".ui.HomeActivity"
             android:launchMode="singleTask"
-            android:name="com.bonuswallet.app.ui.HomeActivity"
-            android:theme="@style/SplashTheme"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
-            >
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
@@ -102,12 +102,15 @@
             </intent-filter>
             <intent-filter>
                 <data android:scheme="wc" />
+
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
             </intent-filter>
             <intent-filter android:priority="999">
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
@@ -139,257 +142,218 @@
         </provider>
 
         <activity
-            android:name="com.bonuswallet.app.ui.WalletsActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_account_list" />
-
-        <activity android:name="com.bonuswallet.app.ui.SplashActivity"
+            android:name=".ui.WalletsActivity"
+            android:label="@string/title_account_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme" />
 
         <service
-            android:name="com.bonuswallet.app.service.WalletConnectService"
-            android:enabled="true">
-        </service>
+            android:name=".service.WalletConnectService"
+            android:enabled="true"></service>
 
-        <activity android:name="com.bonuswallet.app.ui.NameThisWalletActivity"
-            android:windowSoftInputMode="adjustResize"
-            android:screenOrientation="portrait"
-            android:label="@string/name_this_wallet" />
         <activity
-            android:name="com.bonuswallet.app.ui.ImportWalletActivity"
+            android:name=".ui.NameThisWalletActivity"
+            android:label="@string/name_this_wallet"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.ImportWalletActivity"
             android:label="@string/title_import"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
-
         <activity
-            android:name="com.bonuswallet.app.ui.TransactionDetailActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_transaction_details" />
+            android:name=".ui.TransactionDetailActivity"
+            android:label="@string/title_transaction_details"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.MyAddressActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_my_address" />
-
+            android:name=".ui.MyAddressActivity"
+            android:label="@string/title_my_address"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.SendActivity"
+            android:name=".ui.SendActivity"
             android:label="@string/title_activity_send"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
-            android:name="com.bonuswallet.app.ui.AddTokenActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_add_token" />
-
+            android:name=".ui.AddTokenActivity"
+            android:label="@string/title_add_token"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.AssetDisplayActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_use_token" />
-
+            android:name=".ui.AssetDisplayActivity"
+            android:label="@string/title_use_token"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.RedeemSignatureDisplayActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_use_token" />
-
+            android:name=".ui.RedeemSignatureDisplayActivity"
+            android:label="@string/title_use_token"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.GasSettingsActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_send_settings" />
-
+            android:name=".ui.GasSettingsActivity"
+            android:label="@string/title_send_settings"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.SellDetailActivity"
+            android:name=".ui.SellDetailActivity"
             android:label="@string/action_sell"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
-            android:name="com.bonuswallet.app.ui.RedeemAssetSelectActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_redeem" />
-
-        <!--<activity
+            android:name=".ui.RedeemAssetSelectActivity"
+            android:label="@string/title_redeem"
+            android:screenOrientation="portrait" />
+        <!--
+<activity
             android:name=".ui.HomeActivity"
             android:label="@string/toolbar_header_wallet"
-            android:windowSoftInputMode="adjustPan" />-->
-
+            android:windowSoftInputMode="adjustPan" />
+        -->
         <activity
-            android:name="com.bonuswallet.app.ui.ImportTokenActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_import_token" />
-
+            android:name=".ui.ImportTokenActivity"
+            android:label="@string/title_import_token"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.TransferTicketDetailActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/label_transfer_ticket_detail" />
-
+            android:name=".ui.TransferTicketDetailActivity"
+            android:label="@string/label_transfer_ticket_detail"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.HelpActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/toolbar_header_help" />
-
+            android:name=".ui.HelpActivity"
+            android:label="@string/toolbar_header_help"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.TokenDetailActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/token_details" />
-
+            android:name=".ui.TokenDetailActivity"
+            android:label="@string/token_details"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.Erc20DetailActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/erc20_details" />
-
+            android:name=".ui.Erc20DetailActivity"
+            android:label="@string/erc20_details"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.TokenFunctionActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/token_function" />
-
+            android:name=".ui.TokenFunctionActivity"
+            android:label="@string/token_function"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.FunctionActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/token_function" />
-
-        <!--<service android:name="AlphaWalletFirebaseMessagingService">-->
-        <!--<intent-filter>-->
-        <!--<action android:name="com.google.firebase.MESSAGING_EVENT" />-->
-        <!--</intent-filter>-->
-        <!--</service>-->
-
-        <!--<meta-data-->
-        <!--android:name="preloaded_fonts"-->
-        <!--android:resource="@array/preloaded_fonts" />-->
-
-        <!--<meta-data-->
-        <!--android:name="com.google.firebase.messaging.default_notification_icon"-->
-        <!--android:resource="@mipmap/ic_alpha" />-->
-
-        <!--<meta-data-->
-        <!--android:name="com.google.firebase.messaging.default_notification_color"-->
-        <!--android:resource="@color/colorAccent" />-->
-
+            android:name=".ui.FunctionActivity"
+            android:label="@string/token_function"
+            android:screenOrientation="portrait" /> <!-- <service android:name="AlphaWalletFirebaseMessagingService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.MESSAGING_EVENT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <!-- <meta-data -->
+        <!-- android:name="preloaded_fonts" -->
+        <!-- android:resource="@array/preloaded_fonts" /> -->
+        <!-- <meta-data -->
+        <!-- android:name="com.google.firebase.messaging.default_notification_icon" -->
+        <!-- android:resource="@mipmap/ic_alpha" /> -->
+        <!-- <meta-data -->
+        <!-- android:name="com.google.firebase.messaging.default_notification_color" -->
+        <!-- android:resource="@color/colorAccent" /> -->
         <activity
-            android:name="com.bonuswallet.app.ui.WalletActionsActivity"
-            android:screenOrientation="portrait"
-            android:label="Wallet Actions" />
-
+            android:name=".ui.WalletActionsActivity"
+            android:label="Wallet Actions"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.AddEditDappActivity"
-            android:screenOrientation="portrait"
-            android:label="Add DApp" />
-
+            android:name=".ui.AddEditDappActivity"
+            android:label="Add DApp"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.SelectNetworkActivity"
-            android:screenOrientation="portrait"
-            android:label="Select DApp Browser Network" />
-
+            android:name=".ui.SelectNetworkActivity"
+            android:label="Select DApp Browser Network"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.SelectNetworkFilterActivity"
-            android:screenOrientation="portrait"
-            android:label="Select Network Filters" />
-
+            android:name=".ui.SelectNetworkFilterActivity"
+            android:label="Select Network Filters"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.TokenManagementActivity"
-            android:screenOrientation="portrait"
-            android:label="Manage Tokens" />
-
+            android:name=".ui.TokenManagementActivity"
+            android:label="Manage Tokens"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.SelectLocaleActivity"
-            android:screenOrientation="portrait"
-            android:label="Select Language" />
-
+            android:name=".ui.SelectLocaleActivity"
+            android:label="Select Language"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.SelectCurrencyActivity"
-            android:screenOrientation="portrait"
-            android:label="Select Currency" />
-
+            android:name=".ui.SelectCurrencyActivity"
+            android:label="Select Currency"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.BackupKeyActivity"
+            android:name=".ui.BackupKeyActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
-
         <activity
-            android:name="com.bonuswallet.app.ui.SupportSettingsActivity"
-            android:screenOrientation="portrait"
-            android:label="Support Settings" />
-
+            android:name=".ui.SupportSettingsActivity"
+            android:label="Support Settings"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.AdvancedSettingsActivity"
-            android:screenOrientation="portrait"
-            android:label="Advanced Settings" />
-
+            android:name=".ui.AdvancedSettingsActivity"
+            android:label="Advanced Settings"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.StaticViewer"
-            android:screenOrientation="portrait"
-            android:label="View Text" />
-
-        <activity android:name="com.bonuswallet.app.ui.TokenScriptManagementActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/tokenscript_management"/>
-
-        <activity android:name="com.bonuswallet.app.ui.TokenActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/activity_label"/>
-
+            android:name=".ui.StaticViewer"
+            android:label="View Text"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.WalletConnectActivity"
+            android:name=".ui.TokenScriptManagementActivity"
+            android:label="@string/tokenscript_management"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.TokenActivity"
+            android:label="@string/activity_label"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.WalletConnectActivity"
+            android:label="WalletConnect"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:label="WalletConnect" />
-
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.BackupFlowActivity"
-            android:screenOrientation="portrait"
-            android:label="WalletConnect" />
-
+            android:name=".ui.BackupFlowActivity"
+            android:label="WalletConnect"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.SignDetailActivity"
-            android:screenOrientation="portrait"
-            android:label="Sign Details" />
-
+            android:name=".ui.SignDetailActivity"
+            android:label="Sign Details"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.WalletConnectSessionActivity"
-            android:screenOrientation="portrait"
-            android:label="WalletConnect Sessions" />
-
+            android:name=".ui.WalletConnectSessionActivity"
+            android:label="WalletConnect Sessions"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.TransactionSuccessActivity"
-            android:screenOrientation="portrait"
-            android:label="Transaction Success" />
-
+            android:name=".ui.TransactionSuccessActivity"
+            android:label="Transaction Success"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.AddCustomRPCNetworkActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_activity_add_custom_rpcnetwork"/>
-
+            android:name=".ui.AddCustomRPCNetworkActivity"
+            android:label="@string/title_activity_add_custom_rpcnetwork"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.Erc1155Activity"
-            android:screenOrientation="portrait"
-            android:label="ERC1155 Master Activity" />
-
+            android:name=".ui.Erc1155Activity"
+            android:label="ERC1155 Master Activity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.Erc1155AssetSelectActivity"
-            android:screenOrientation="portrait"
-            android:label="ERC1155 Asset Selection" />
-
+            android:name=".ui.Erc1155AssetSelectActivity"
+            android:label="ERC1155 Asset Selection"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.Erc1155AssetDetailActivity"
-            android:screenOrientation="portrait"
-            android:label="ERC1155 Asset Details" />
-
+            android:name=".ui.Erc1155AssetDetailActivity"
+            android:label="ERC1155 Asset Details"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.Erc1155AssetListActivity"
-            android:screenOrientation="portrait"
-            android:label="ERC1155 Asset Details" />
-
+            android:name=".ui.Erc1155AssetListActivity"
+            android:label="ERC1155 Asset Details"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.TransferNFTActivity"
-            android:screenOrientation="portrait"
-            android:label="NFT Transfer" />
-
+            android:name=".ui.TransferNFTActivity"
+            android:label="NFT Transfer"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.bonuswallet.app.ui.QRScanning.QRScanner"
-            android:screenOrientation="portrait"
-            android:label="@string/qr_scanner" />
-
+            android:name=".ui.QRScanning.QRScanner"
+            android:label="@string/qr_scanner"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.KycVerificationActivity"
+            android:label="@string/title_kyc_verification"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

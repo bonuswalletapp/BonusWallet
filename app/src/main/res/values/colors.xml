@@ -59,6 +59,28 @@
 	<color name="greydd">#dddddd</color>
 	<color name="greyf2">#f2f2f2</color>
 
+	<color name="kyc_name">#131B6A</color>
+	<color name="kyc_unverified_label">#721C24</color>
+	<color name="kyc_unverified_bg">#F8D7DA</color>
+	<color name="kyc_unverified_border">#F5C6CB</color>
+	<color name="kyc_unverified_title">#721C24</color>
+	<color name="kyc_unverified_subtitle">#856404</color>
+	<color name="kyc_verified_label">#155724</color>
+	<color name="kyc_verified_bg">#D4EDDA</color>
+	<color name="kyc_verified_border">#C3E6CB</color>
+	<color name="kyc_verified_title">#28A745</color>
+	<color name="kyc_verified_subtitle">#155724</color>
+	<color name="kyc_declined_label">#721C24</color>
+	<color name="kyc_declined_bg">#F8D7DA</color>
+	<color name="kyc_declined_border">#F5C6CB</color>
+	<color name="kyc_declined_title">#721C24</color>
+	<color name="kyc_declined_subtitle">#856404</color>
+	<color name="kyc_pending_label">#856404</color>
+	<color name="kyc_pending_bg">#F8D7DA</color>
+	<color name="kyc_pending_border">#FFEEBA</color>
+	<color name="kyc_pending_title">#FFC107</color>
+	<color name="kyc_pending_subtitle">#856404</color>
+
 
 	<color name="onboarding_indicator_unselected">#d8d8d8</color>
 	<color name="onboarding_indicator_selected">#b7b7b7</color>

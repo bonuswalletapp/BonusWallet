@@ -60,6 +60,7 @@ public class NewSettingsFragment extends BaseFragment {
     private LinearLayout systemSettingsLayout;
     private LinearLayout supportSettingsLayout;
 
+    private SettingsItemView kycSetting;
     private SettingsItemView myAddressSetting;
     private SettingsItemView changeWalletSetting;
     private SettingsItemView backUpWalletSetting;
@@ -151,6 +152,13 @@ public class NewSettingsFragment extends BaseFragment {
         supportSettingsLayout = view.findViewById(R.id.layout_settings_support);
         updateLayout = view.findViewById(R.id.layout_update);
 
+        kycSetting =
+                new SettingsItemView.Builder(getContext())
+                        .withIcon(R.drawable.ic_settings_kyc)
+                        .withTitle(R.string.title_kyc_verification)
+                        .withListener(this::onKycVerificationSettingClicked)
+                        .build();
+
         myAddressSetting =
                 new SettingsItemView.Builder(getContext())
                         .withIcon(R.drawable.ic_settings_wallet_address)
@@ -234,6 +242,7 @@ public class NewSettingsFragment extends BaseFragment {
         int systemIndex = 0;
         int supportIndex = 0;
 
+        walletSettingsLayout.addView(kycSetting, walletIndex++);
         walletSettingsLayout.addView(myAddressSetting, walletIndex++);
 
         if (CustomViewSettings.canChangeWallets())
@@ -461,6 +470,12 @@ public class NewSettingsFragment extends BaseFragment {
 
     private void onShowWalletAddressSettingClicked() {
         viewModel.showMyAddress(getContext());
+    }
+
+    private void onKycVerificationSettingClicked() {
+        Intent intent = new Intent(getContext(), KycVerificationActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+        startActivity(intent);
     }
 
     private void onChangeWalletSettingClicked() {

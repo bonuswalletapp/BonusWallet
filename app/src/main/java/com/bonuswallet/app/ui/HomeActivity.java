@@ -52,6 +52,8 @@ import androidx.viewpager.widget.ViewPager;
 import com.bonuswallet.app.BuildConfig;
 import com.bonuswallet.app.C;
 import com.bonuswallet.app.R;
+import com.bonuswallet.app.entity.BackupOperationType;
+import com.bonuswallet.app.entity.BackupTokenCallback;
 import com.bonuswallet.app.entity.ContractLocator;
 import com.bonuswallet.app.entity.CryptoFunctions;
 import com.bonuswallet.app.entity.CustomViewSettings;
@@ -592,7 +594,7 @@ public class HomeActivity extends BaseNavigationActivity implements View.OnClick
         }
     }
 
-    private void showPage(WalletPage page)
+    public void showPage(WalletPage page)
     {
         int oldPage = viewPager.getCurrentItem();
 

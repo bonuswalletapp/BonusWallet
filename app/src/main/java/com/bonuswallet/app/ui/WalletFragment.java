@@ -4,6 +4,7 @@ import static android.app.Activity.RESULT_OK;
 import static com.bonuswallet.app.C.ADDED_TOKEN;
 import static com.bonuswallet.app.C.ErrorCode.EMPTY_COLLECTION;
 import static com.bonuswallet.app.C.Key.WALLET;
+import static com.bonuswallet.app.entity.WalletPage.DAPP_BROWSER;
 import static com.bonuswallet.app.repository.TokensRealmSource.ADDRESS_FORMAT;
 
 import android.content.Intent;
@@ -594,21 +595,23 @@ public class WalletFragment extends BaseFragment implements
     @Override
     public void BackupClick(Wallet wallet)
     {
-        Intent intent = new Intent(getContext(), BackupKeyActivity.class);
-        intent.putExtra(WALLET, wallet);
+//        Intent intent = new Intent(getContext(), BackupKeyActivity.class);
+//        intent.putExtra(WALLET, wallet);
+//
+//        switch (viewModel.getWalletType())
+//        {
+//            case HDKEY:
+//                intent.putExtra("TYPE", BackupOperationType.BACKUP_HD_KEY);
+//                break;
+//            case KEYSTORE:
+//                intent.putExtra("TYPE", BackupOperationType.BACKUP_KEYSTORE_KEY);
+//                break;
+//        }
+//
+//        intent.setFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+//        handleBackupClick.launch(intent);
+        ((HomeActivity)getActivity()).showPage(DAPP_BROWSER);
 
-        switch (viewModel.getWalletType())
-        {
-            case HDKEY:
-                intent.putExtra("TYPE", BackupOperationType.BACKUP_HD_KEY);
-                break;
-            case KEYSTORE:
-                intent.putExtra("TYPE", BackupOperationType.BACKUP_KEYSTORE_KEY);
-                break;
-        }
-
-        intent.setFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
-        handleBackupClick.launch(intent);
     }
 
     @Override

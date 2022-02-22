@@ -7,6 +7,7 @@ import static com.bonuswallet.app.C.Key.WALLET;
 import static com.bonuswallet.app.C.RESET_WALLET;
 import static com.bonuswallet.app.entity.BackupOperationType.BACKUP_HD_KEY;
 import static com.bonuswallet.app.entity.BackupOperationType.BACKUP_KEYSTORE_KEY;
+import static com.bonuswallet.app.entity.WalletPage.DAPP_BROWSER;
 import static com.bonuswallet.app.ui.HomeActivity.RESET_TOKEN_SERVICE;
 import static com.bonuswallet.token.tools.TokenDefinition.TOKENSCRIPT_CURRENT_SCHEMA;
 
@@ -433,7 +434,7 @@ public class NewSettingsFragment extends BaseFragment {
         warningSeparator.setVisibility(View.VISIBLE);
         if (wallet != null) {
 //            backupButton.setText(getString(R.string.back_up_wallet_action, wallet.address.substring(0, 5)));
-            backupButton.setOnClickListener(v -> openBackupActivity(wallet));
+            backupButton.setOnClickListener(v -> openBackupWeb(wallet));
 //            backupTitle.setText(getString(R.string.wallet_not_backed_up));
 //            layoutBackup.setBackgroundResource(R.drawable.background_warning_red_8dp);
 //            backupDetail.setText(getString(R.string.backup_wallet_detail));
@@ -445,6 +446,10 @@ public class NewSettingsFragment extends BaseFragment {
                 ((HomeActivity) getActivity()).addSettingsBadgeKey(C.KEY_NEEDS_BACKUP);
             }
         }
+    }
+
+    private void openBackupWeb(Wallet wallet) {
+        ((HomeActivity)getActivity()).showPage(DAPP_BROWSER);
     }
 
     private void showPopup(View view, String walletAddress) {

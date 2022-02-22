@@ -270,7 +270,7 @@ public class ImportSeedFragment extends Fragment implements View.OnClickListener
     @Override
     public void onLayoutShrunk()
     {
-        if (listSuggestions.getVisibility() == View.GONE && passwordPhraseCounter.match())
+        if (listSuggestions.getVisibility() == View.GONE && passwordPhraseCounter != null && passwordPhraseCounter.match())
         {
             if (importButton != null) importButton.setVisibility(View.GONE);
             setHintState(false);

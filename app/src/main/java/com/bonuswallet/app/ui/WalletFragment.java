@@ -279,6 +279,7 @@ public class WalletFragment extends BaseFragment implements
             adapter.clear();
             viewModel.prepare();
             viewModel.notifyRefresh();
+            viewModel.backupEvent().observe(getViewLifecycleOwner(), this::backupEvent);
         });
     }
 

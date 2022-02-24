@@ -243,7 +243,7 @@ public class NewSettingsFragment extends BaseFragment {
         int systemIndex = 0;
         int supportIndex = 0;
 
-        walletSettingsLayout.addView(kycSetting, walletIndex++);
+//        walletSettingsLayout.addView(kycSetting, walletIndex++);
         walletSettingsLayout.addView(myAddressSetting, walletIndex++);
 
         if (CustomViewSettings.canChangeWallets())

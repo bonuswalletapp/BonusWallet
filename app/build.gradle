@@ -38,7 +38,7 @@ android {
         versionCode 1
         versionName "0.1"
 
-        applicationId "com.bonuswallet.app"
+        applicationId "com.ubiwallet.app"
         minSdkVersion 23
         targetSdkVersion 30
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'

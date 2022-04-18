@@ -9,12 +9,15 @@ import com.bonuswallet.ethereum.EthereumNetworkBase;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.bonuswallet.ethereum.EthereumNetworkBase.BINANCE_MAIN_ID;
+import static com.bonuswallet.ethereum.EthereumNetworkBase.BINANCE_TEST_ID;
 import static com.bonuswallet.ethereum.EthereumNetworkBase.MAINNET_ID;
 
 public class CustomViewSettings
 {
-    private static final long primaryChain = MAINNET_ID;
-    private static final String primaryChainName = C.ETHEREUM_NETWORK_NAME;
+    public static final long primaryChain = BINANCE_MAIN_ID;
+    public static final long primaryTestChain = BINANCE_TEST_ID;
+    public static final String primaryChainName = C.ETHEREUM_NETWORK_NAME;
 
     //You can use the settings in this file to customise the wallet appearance
 

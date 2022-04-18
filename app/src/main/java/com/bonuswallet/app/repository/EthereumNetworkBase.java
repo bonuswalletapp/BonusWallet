@@ -10,6 +10,7 @@ import com.bonuswallet.app.C;
 import com.bonuswallet.app.R;
 import com.bonuswallet.app.entity.ContractLocator;
 import com.bonuswallet.app.entity.ContractType;
+import com.bonuswallet.app.entity.CustomViewSettings;
 import com.bonuswallet.app.entity.NetworkInfo;
 import com.bonuswallet.app.entity.Wallet;
 import com.bonuswallet.app.entity.tokens.Token;
@@ -583,7 +584,7 @@ public abstract class EthereumNetworkBase implements EthereumNetworkRepositoryTy
     @Override
     public Long getDefaultNetwork(boolean isMainNet)
     {
-        return isMainNet ? BINANCE_MAIN_ID : BINANCE_TEST_ID;
+        return isMainNet ? CustomViewSettings.primaryChain : CustomViewSettings.primaryTestChain;
     }
 
     @Override
@@ -732,7 +733,7 @@ public abstract class EthereumNetworkBase implements EthereumNetworkRepositoryTy
         }
         else
         {
-            return networkMap.get(MAINNET_ID).getEtherscanUri(txHash).toString();
+            return networkMap.get(CustomViewSettings.primaryChain).getEtherscanUri(txHash).toString();
         }
     }
 
@@ -775,12 +776,12 @@ public abstract class EthereumNetworkBase implements EthereumNetworkRepositoryTy
 
     public static List<Long> addDefaultNetworks()
     {
-        return new ArrayList<>(Collections.singletonList(MAINNET_ID));
+        return new ArrayList<>(Collections.singletonList(CustomViewSettings.primaryChain));
     }
 
     public static ContractLocator getOverrideToken()
     {
-        return new ContractLocator("", MAINNET_ID, ContractType.ETHEREUM);
+        return new ContractLocator("", CustomViewSettings.primaryChain, ContractType.ETHEREUM);
     }
 
     @Override
@@ -929,7 +930,7 @@ public abstract class EthereumNetworkBase implements EthereumNetworkRepositoryTy
         }
         else
         {
-            return networkMap.get(MAINNET_ID).name;
+            return networkMap.get(CustomViewSettings.primaryChain).name;
         }
     }
 
@@ -943,7 +944,7 @@ public abstract class EthereumNetworkBase implements EthereumNetworkRepositoryTy
         }
         else
         {
-            return networkMap.get(MAINNET_ID).symbol;
+            return networkMap.get(CustomViewSettings.primaryChain).symbol;
         }
     }
 }

@@ -1,22 +1,22 @@
 
 
-# JAX UBI - Advanced, Open Source Ethereum Mobile Wallet & dApp Browser for Android
+# Jaxre Bonus - Advanced, Open Source Ethereum Mobile Wallet & dApp Browser for Android
 
-JAX UBI is an open source programmable blockchain apps platform.
+Jaxre Bonus is an open source programmable blockchain apps platform.
 
 
-### JAX UBI Is A Token Wallet
+### Jaxre Bonus Is A Token Wallet
 
-JAX UBI's focus is to provide an interface to interact with Ethereum Tokens in an intuitive, simple and full featured manner. This is what sets us aside from other open source ethereum wallets.
+Jaxre Bonus's focus is to provide an interface to interact with Ethereum Tokens in an intuitive, simple and full featured manner. This is what sets us aside from other open source ethereum wallets.
 
-JAX UBI is a decentralized wallet for the Jax.Money platform. It provides a way to manage WJAX, WJXN, JAXRE, JAXUD, and other digital assets conveniently and securely.
+Jaxre Bonus is a decentralized wallet for the Jax.Money platform. It provides a way to manage WJAX, WJXN, JAXRE, JAXUD, and other digital assets conveniently and securely.
 
 Features:
 Secure
 Decentralized
 Convenient
 
-JAX UBI allows you to store, send, and receive digital coins in complete safety and privacy. It’s a non-custodial wallet that ensures only the owner has full control over the wallet account.
+Jaxre Bonus allows you to store, send, and receive digital coins in complete safety and privacy. It’s a non-custodial wallet that ensures only the owner has full control over the wallet account.
 
 The wallet lets users enjoy full decentralization of carrying out transactions with the leading cryptocurrencies. The app doesn't store any information about users’ accounts and doesn't require KYC for using basic features in the wallet.
 
@@ -36,7 +36,7 @@ You can submit feedback and report bugs as Github issues. Please be sure to incl
 
 ## How to customise the appearance of your wallet fork
 
-If you are forking JAX UBI, and have a token that you want to be locked visible this can now be done easily. Let's say we want to only show Ethereum Mainnet, and always show the USDC stablecoin.
+If you are forking Jaxre Bonus, and have a token that you want to be locked visible this can now be done easily. Let's say we want to only show Ethereum Mainnet, and always show the USDC stablecoin.
 
 ```
 class CustomViewSettings
@@ -62,7 +62,7 @@ public abstract class EthereumNetworkBase ...
 {
     private static final String DEFAULT_HOMEPAGE = "https://my-awesome-nfts.com/usdc/";
 ```
-If you are forking JAX UBI and you have a cool Token, please consider donating a small amount of said Token to `JAX UBI.eth` to help fund continuing development of the main repo.
+If you are forking Jaxre Bonus and you have a cool Token, please consider donating a small amount of said Token to `Jaxre Bonus.eth` to help fund continuing development of the main repo.
 
 ### Request or submit a feature :postbox:
 

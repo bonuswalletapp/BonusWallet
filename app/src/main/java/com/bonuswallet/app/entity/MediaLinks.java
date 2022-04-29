@@ -17,5 +17,5 @@ public class MediaLinks
 
     public static final String AWALLET_EMAIL1 = "feedback";
     public static final String AWALLET_EMAIL2 = "jaxwallet.io";
-    public static final String AWALLET_SUBJECT = "Jaxre Bonus Android Help";
+    public static final String AWALLET_SUBJECT = "JAX RUPEE Android Help";
 }

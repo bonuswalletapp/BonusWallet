@@ -35,7 +35,7 @@ android {
         }
     }
     defaultConfig {
-        versionCode 2
+        versionCode 3
         versionName "0.1"
 
         applicationId "com.bonuswallet.app"
@@ -44,7 +44,7 @@ android {
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         def XInfuraAPI = "XInfuraAPI"
         //Put your Infura key here, NB with over 30 - 40 users this API key will rate limit, it's only here for bootstrapping a free build
-        def DEFAULT_INFURA_API_KEY = "\"da3717f25f824cc1baa32d812386d93f\"";
+        def DEFAULT_INFURA_API_KEY = "\"b917efb0c01c49ce999394ee6da52501\"";
 
         buildConfigField 'int', 'DB_VERSION', '35'
         buildConfigField "String", XInfuraAPI, DEFAULT_INFURA_API_KEY
@@ -84,6 +84,26 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        applicationVariants.all{
+                // this method is use to rename your release apk only
+            variant ->
+                variant.outputs.each{
+                        // on below line we are setting a name to our apk
+                    output->
+                        // on below line we are specifying our app name.
+                        project.ext { appName = 'BonusWallet-mainnet' }
+                        // on below line we are adding the formatted date to our apk file name.
+                        def formattedDate = new Date().format('yyyy-MM-dd-HH-mm-ss')
+                        // on below line we are creating a new name for our apk.
+                        def newName = output.outputFile.name
+                        // on below line we are replacing our previous name with our app name.
+                        newName = newName.replace("app-", "$project.ext.appName-")
+                        // on below line we are replacing -release with our formatted date.
+                        newName = newName.replace("-release", "-release-" + formattedDate)
+                        // at last we are setting our apk name to it.
+                        output.outputFileName  = newName
+                }
         }
     }
     packagingOptions {
